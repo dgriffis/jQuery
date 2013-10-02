@@ -71,15 +71,15 @@ function playGame(e) {
   $img.addClass('visible');
 
   //get it's src attr
-  selectedImg = $img.attr("src")
+  selectedImg = $img.attr("src");
 
   //see if there is another img element - look for class visible
   var $imgs = $('img.visible' );
   arr = [];
   foundImg = "";
   $imgs.each(function () {
-   foundImg = $(this).attr('src')
-   arr.push(foundImg)
+   foundImg = $(this).attr('src');
+   arr.push(foundImg);
   });
 
   if (arr.length == 1 ){
@@ -92,8 +92,8 @@ function playGame(e) {
       totalScore+=2;
       //these images are the same so mark them as done
       $imgs.each(function() {
-        $(this).removeClass("visible")
-        $(this).addClass("done")
+        $(this).removeClass("visible");
+        $(this).addClass("done");
       });
     } else{
       //not a match so decrement the score
@@ -103,18 +103,18 @@ function playGame(e) {
     //hide all but the selected
     $imgs.each(function() {
     if ($(this).attr('id') != $img.attr('id')) {
-      $(this).removeClass("visible")
-      $(this).addClass("hidden")
+      $(this).removeClass("visible");
+      $(this).addClass("hidden");
       }
     });
-  }
+  };
 
   //see if the game is over and display score if so
   var count = $('.done').length;
   if (count == 12){
-    alert('The game is over and your score is ' + totalScore.toString() )
-  }
-}
+    alert('The game is over and your score is ' + totalScore.toString() );
+  };
+};
 
 $(document).ready(function() {
   //set the images to the 3x4 rows
