@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+  <title>jQuery: Events Project 2</title>
+  <meta charset="utf-8">
+  <style>
+    ul {
+      list-style-type: none;
+    }
+    ul.menu {
+      position: relative;
+    }
+    ul.menu > li {
+      position: relative;
+      float: left;
+      padding: 5px 20px 5px 20px;
+      background-color: #ccc;
+      border-right: 1px solid black;
+    }
+    ul.menu > li:last-child {
+      border-right: none;
+    }
+    ul.menu > li:hover {
+      background-color: #F3D673;
+    }
+    ul.menu ul {
+      margin-left: 0px;
+      padding-left: 0px;
+      visibility: hidden;
+      position: absolute;
+      top: 100%;
+      left: 0px;
+    }
+    ul.menu ul > li {
+      padding: 5px 20px 5px 20px;
+      background-color: #f6f6f6;
+    }
+    ul.menu ul > li:hover {
+      background-color: #F3D673;
+    }
+    li {
+      cursor: pointer;
+    }
+    div {
+      float: left;
+      width: 100px;
+      height: 100px;
+      border: 1px solid black;
+      margin-left: 100px;
+      text-align: center;
+      vertical-align: middle;
+      font-family: Helvetica, sans-serif;
+    }
+  </style>
+  <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+  <script src="menu.js"> </script>
+</head>
+<body>
+<ul class="menu">
+<li>Colors
+    <ul id="color" class="submenu">
+    <li>Pink</li>
+    <li>Yellow</li>
+    <li>Green</li>
+    <li>Blue</li>
+    </ul>
+</li>
+<li>Shapes
+    <ul id="shape" class="submenu">
+    <li>Square</li>
+    <li>Circle</li>
+    </ul>
+</li>
+</ul>
+<div></div>
+</body>
+</html>   

@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <title>jQuery and CSS Project: A Light Switch</title>
+  <meta charset="utf-8">
+  <style>
+    body {
+      margin: 20px;
+
+    }
+    .dark{
+      background-color: black;
+    }
+    
+    div#lightswitch {
+      width: 150px;
+    }
+    .flipped {
+      -webkit-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+  </style>
+  <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+  <script src="light.js"></script>
+</head>
+<body>
+  <div id="lightswitch" class="on">
+  <img src="http://efreeman.userworld.com/jQuery/lightSwitch.png"
+     alt="A lightswitch">
+  </div>
+  <div id="art">
+  <img src="http://efreeman.userworld.com/jQuery/Tilla.JPG"
+     alt="A photo of my dog, Tilla">
+  </div>
+</body>
+</html>            
