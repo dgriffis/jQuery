@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+    <title>jQuery: Placing Random Elements</title>
+    <meta charset="utf-8">
+    <style>
+        div {
+            position: absolute;
+            background-color: lightblue;
+            opacity: .5;
+            width: 100px;
+            height: 100px;
+            box-shadow: 3px 3px 5px gray;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script>
+
+    <!-- The following two vars give us the viewport -->
+    var width = $(window).width();
+    var height = $(window).height();
+
+    $(document).ready(function() {
+
+      for ( i=0; i<100; i++){
+        <!-- get the random location - the div to be added is 100x100 so take that into account -->
+        var divLeft = Math.floor(Math.random() * (width - 100) + 0) ;
+        var divTop = Math.floor(Math.random() * (height - 100) + 0) ;
+        <!-- Now append the new div to the body -->
+        $("<div></div>").appendTo("body" ).css({
+          position: "absolute",
+          left: divLeft,
+          top:  divTop
+          });
+      };
+    });
+   </script>
+</head>
+<body>
+</body>
+</html>      
