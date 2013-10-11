@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+    <title>jQuery Project: An image slide show with Effects</title>
+    <meta charset="utf-8">
+    <style>
+        div#container {
+            width: 600px;
+            margin: auto;
+        }
+        div#images {
+            position: relative;
+            width: 600px;
+        }
+        div#images img {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+        img.hidden {
+            z-index: 0;
+        }
+        img.top {
+            z-index: 1;
+        }
+        div#caption {
+            position: relative;
+            top: 470px;
+        }
+        form {
+            position: relative;
+            top: 490px;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script src="imageShow.js"> </script>
+</head>
+<body>
+<div id="container">
+    <div id="images">
+        <img class="top" src="http://courses-test.oreillyschool.com/jquery/QuizzesAndProjects/images/pet_1.jpg" alt="Jack, the cat">
+        <img class="hidden" src="http://courses-test.oreillyschool.com/jquery/QuizzesAndProjects/images/pet_2.jpg" alt="Pickles, the cat">
+        <img class="hidden" src="http://courses-test.oreillyschool.com/jquery/QuizzesAndProjects/images/pet_3.jpg" alt="Tilla, the dog">
+    </div>
+    <div id="caption"></div>
+    <form>
+        <input type="button" value="start">
+    </form>
+</div>
+</body>
+</html>        
