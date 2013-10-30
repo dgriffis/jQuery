@@ -1,8 +1,7 @@
 jQuery
 ======
 
-This repo contains demo programs that I've put together from an online class.
-
+This repo contains demo programs that I've put together for an online class.
 
 To see these demo's:
   * Clone the repo
