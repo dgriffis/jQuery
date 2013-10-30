@@ -81,7 +81,7 @@ function updateValues(event,ui){
 $(document).ready(function() {
 
   $.ajaxSetup({ cache: false });
-  $.getJSON("http://localhost:31338/eu.json")
+  $.getJSON("http://localhost:31338/euMaps/eu.json")
     .success(function(data) {
       setMapPoints(data);
     })
