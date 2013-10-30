@@ -1,10 +1,10 @@
 //this is my hash of images
-myImages={'cheese':'http://efreeman.userworld.com/jQuery/images/cheese.gif',
-          'eggs':'http://efreeman.userworld.com/jQuery/images/eggs.gif',
-          'blender':'http://efreeman.userworld.com/jQuery/images/kitchen_blender.gif',
-          'tea':'http://efreeman.userworld.com/jQuery/images/tea.gif',
-          'colander':'http://efreeman.userworld.com/jQuery/images/kitchen_collander.gif',
-          'teapot':'http://efreeman.userworld.com/jQuery/images/kitchen_teapot.gif'};
+myImages={'cheese':'//localhost:31338/cards/images/cheese.gif',
+          'eggs':'//localhost:31338/cards/images/eggs.gif',
+          'blender':'//localhost:31338/cards/images/kitchen_blender.gif',
+          'tea':'//localhost:31338/cards/images/tea.gif',
+          'colander':'//localhost:31338/cards/images/kitchen_collander.gif',
+          'teapot':'//localhost:31338/cards/images/kitchen_teapot.gif'};
 //array of numbers that represent the slots
 var index = [0,1,2,3,4,5,6,7,8,9,10,11];
 var indexImg = [];
