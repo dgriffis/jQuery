@@ -1,6 +1,6 @@
 $(document).ready(function() {
     //a selector that will tell me if I've hovered over 
-    //over the top level menu - the first function is executed when I nouseover and drops the submenu
+    //over the top level menu - the first function is executed when I mouseover and drops the submenu
     //The second function is for the opposite action
     $("ul.menu > li").hover(
         function(){
@@ -24,7 +24,7 @@ function changeDivCSS(e) {
         $('div').css({"backgroundColor":targetText});
     }
     else {
-    //if it's not a colr then it's a shape so test for Circle
+    //if it's not a color then it's a shape so test for Circle
     // and apply the border-radius accordingly
         if (targetText === "Circle") {
             size = $('div').width() / 2;
