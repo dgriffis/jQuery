@@ -1,3 +1,4 @@
+
 function setMapPoints(data){
   //slider globals
   var currentSlide = 0; var nextSlide = 1;
@@ -41,18 +42,6 @@ function setMapPoints(data){
   });
 }
 
-function resizeDataPts() {
-  $(".dataPt").each(function() {
-    var id = $(this).attr("id");
-    var newSize = data[id].rate * multiplier;
-    $(this).animate({
-      width: newSize,
-      height: newSize
-    }, "fast");
-  });
-
-}
-
 function updateValues(event,ui){
   //get current values of slider
   currentSlide = $("#slider").slider("value");
@@ -72,7 +61,7 @@ function updateValues(event,ui){
     var newHalfWidth = newWidth / 2;
     $(this).css("width", newWidth);
     $(this).css("height", newWidth);
-    $(this).css("border-radius", newHalfWidth)
+    $(this).css("border-radius", 100)
   });
 
 }
@@ -81,7 +70,7 @@ function updateValues(event,ui){
 $(document).ready(function() {
 
   $.ajaxSetup({ cache: false });
-  $.getJSON("http://localhost:31338/euMaps/eu.json")
+  $.getJSON("http://localhost:31338/eu.json")
     .success(function(data) {
       setMapPoints(data);
     })
@@ -94,19 +83,9 @@ $(document).ready(function() {
     });
 
   //add hover functions for data points
-  $('#map').on('mouseenter','.dataPt',function() {
+  $('#map').on('mouseenter','.dataPt',function(evt) {
 
-    var x=$(this).offset();
-;
-    //get the detail class and fade it in
-    $detail = $(this).find('.dataDetail').fadeIn();
-
-    $detail.offset(function(n,c){
-      newPos=new Object();
-      newPos.left=c.left+20;
-      newPos.top=c.top+20;
-      return newPos;
-    });
+    $detail = $(this).find('.dataDetail').css({ top: evt.offsetX+10, left: evt.offsetY+10 }).fadeIn();
 
     //add the border class
     $(this).addClass('dataPtHover');
@@ -124,21 +103,14 @@ $(document).ready(function() {
   });
 
   //initialize the slider
-
   $("#slider").slider({
-    max: 7,
+    max: 10,
     min: 1,
     range: "min",
-    value: multiplier,
+    value: "1",
     slide: function(evt, ui) {
-      if (multiplier != ui.value) {
-        multiplier = ui.value;
-        resizeDataPts();
-      }
+      updateValues(evt, ui);
     }
   });
-
-
-
 
 });
